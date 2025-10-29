@@ -4,16 +4,14 @@ import { useState } from 'react';
 
 export default function App() {
 const [email, setEmail] = useState('');
-const [contraseña, setContraseña] = useState('');
 
   return (
     <View style={styles.container}>
       <Text style={styles.textStyle}>Sign in</Text>
        <CustomInput 
-       value={contraseña} 
-       placeholder={'Contraseña'} 
-       onChange={setContraseña}
-                
+       value={email} 
+       placeholder={'Email'} 
+       onChange={setEmail}    
       />
     </View>
 
