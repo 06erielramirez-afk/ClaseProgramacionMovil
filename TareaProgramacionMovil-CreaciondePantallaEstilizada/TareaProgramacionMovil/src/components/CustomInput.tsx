@@ -17,8 +17,6 @@ export default function CustomInput ({type = "email", required, value, placehold
     const icon = type === 'email' ? 'email' : 
                     type === 'password' ? 'lock' : ''
     return(
-        // wrapper
-            //inputContainer
             <View style={styles.inputContainer}>
                 <MaterialIcons name={icon as any } size={28} color="#000000" />
                 <TextInput 
@@ -45,11 +43,10 @@ const styles = StyleSheet.create({
     wrapper: {
         padding: 15,
     },
+    
     inputContainer: {
-        //distribucion de componentes
         flexDirection: 'row',
         alignItems: 'center',
-        //estilizacion de input
         borderWidth: 1,
         borderColor:'#ccc',
         borderRadius: 8, 
@@ -58,13 +55,10 @@ const styles = StyleSheet.create({
         width:'85%',
         marginBottom: 15,
         paddingVertical: 10
-
                 
     },
     input:{
         flex: 1,
-        
-        //agregando espacio al componente input nativo
         paddingVertical: 12,
         paddingHorizontal: 15,
         fontSize: 22,
