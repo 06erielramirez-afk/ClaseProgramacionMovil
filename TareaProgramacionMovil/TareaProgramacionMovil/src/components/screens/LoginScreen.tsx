@@ -1,11 +1,20 @@
 import { StyleSheet, Text, View } from 'react-native';
-import CustomInput from './src/components/CustomInput';
 import { useState } from 'react';
-import CustomButton from './src/components/CustomButton';
+import CustomInput from '../CustomInput';
+import CustomButton from '../CustomButton';
 
-export default function App() {
+
+export default function LoginScreen({navigation} : any) {
 const [email, setEmail] = useState('');
 const [Contraseña, setContraseña] = useState('');
+const handleLogin = () => {
+    try {
+        navigation.navigate('Home',{email});
+    } catch (error) {
+        console.log(error);
+    }
+
+}
 
   return (
     <View style={styles.ViewStyle}>
@@ -28,7 +37,7 @@ const [Contraseña, setContraseña] = useState('');
 
         <CustomButton 
           title="Login" 
-          onPress={() => {}} 
+          onPress={handleLogin} 
           variant="primary"
           
         />
